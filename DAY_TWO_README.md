@@ -25,7 +25,7 @@
 
 #### Tasks (Day II)
 
-- [] Use lifecycle methods
+- [X] Use lifecycle methods
   - [X] In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
 
 - Adding comments
