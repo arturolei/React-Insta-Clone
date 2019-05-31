@@ -1,6 +1,14 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CommentBlock = styled.div`
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 2%;
+`;
 
 
 class CommentSection extends React.Component{
@@ -12,11 +20,6 @@ class CommentSection extends React.Component{
         }
     }
     
-    // componentDidMount(){
-    //     this.setState({comments:this.props.comments}, function() {
-    //         console.log(this.state.comments)
-    //     })
-    // }
 
     eventHandler = event =>{
         this.setState({newComment:event.target.value})
@@ -31,8 +34,7 @@ class CommentSection extends React.Component{
 
     render(){
         return (
-            <div>
-               
+            <CommentBlock>
                 {this.state.comments.map(comment => {
                    return (
                     <div className = "comment-section-block">
@@ -48,7 +50,7 @@ class CommentSection extends React.Component{
                     value={this.state.newComment}
                 />
                 </form>
-            </div>
+            </CommentBlock>
         );
     }
 }
